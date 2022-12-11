@@ -36,8 +36,21 @@ function multiply(num1, num2) {
     return ((num1 * multiple) * (num2 * multiple)) / multiple ** 2;
 }
 
+/**
+ * @param {number} num1 
+ * @param {number} num2 
+ * @returns {number}
+ */
+function divide(num1, num2) {
+    const decimalPlaces = getMaxDecimalPlaces(num1, num2);
+    const multiple = 10 ** decimalPlaces;
+
+    return ((num1 * multiple) / (num2 * multiple));
+}
+
 module.exports = {
     sum,
     subtract,
-    multiply
+    multiply,
+    divide
 }
